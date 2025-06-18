@@ -4,7 +4,15 @@ def removeDuplicates(self, nums):
     :rtype: int
     """
 
-    lo = 0
-    hi = len(nums) - 1
-    while lo < hi:
-        if nums[lo] ==
+    if not nums:
+        return 0
+    write = 1
+    for read in range(1, len(nums)):
+        if nums[read] != nums[read - 1]:
+            nums[write] = nums[read]
+            write += 1
+    return write
+
+
+# Time complexity: O(n)
+# Space complexity: O(1)
