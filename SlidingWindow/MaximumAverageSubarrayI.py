@@ -11,3 +11,5 @@ def findMaxAverage(self, nums, k):
         avg = cur_sum / k
         max_average = max(avg, max_average)
     return max_average
+# Time complexity: O(n)
+# Space complexity: O(1)
