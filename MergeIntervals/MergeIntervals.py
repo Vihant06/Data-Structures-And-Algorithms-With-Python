@@ -1,6 +1,7 @@
 def merge(intervals):
     if not intervals:
         return []
+    intervals.sort(key=lambda x: x[0])
     merged = [intervals[0]]
     for current in intervals[1:]:
         last = merged[-1]
@@ -9,6 +10,5 @@ def merge(intervals):
         else:
             merged.append(current)
     return merged
-
 # Time complexity: O(nlogn)
 # Space complexity: O(n)
